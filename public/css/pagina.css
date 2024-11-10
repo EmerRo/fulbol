@@ -1,0 +1,411 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0F172A;
+    color: #ffffff;
+  }
+
+  /* Navbar */
+  .navbar {
+    background-color: #0F172A;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+
+  .nav-menu li a:hover {
+    color: #38BDF8;
+  }
+
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .btn-primary, .btn-secondary, .btn-login, .btn-register {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-login {
+    background-color: #f34739;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+
+  .btn-login:hover {
+    background-color: #f34739;
+  }
+
+  .btn-register {
+    background-color: #0EA5E9;
+    color: #0F172A;
+    border-radius: 5px;
+  }
+
+  .btn-register:hover {
+    background-color: #0EA5E9;
+  }
+
+  .btn-primary {
+    background-color: #38BDF8;
+    color: #0F172A;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+  }
+
+  .btn-primary:hover {
+    background-color: #0EA5E9;
+  }
+
+  .btn-secondary {
+    background-color: #f34739;
+    color: #0F172A;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+  }
+
+  .btn-secondary:hover {
+    background-color: #d63c30;
+  }
+
+
+
+
+
+
+  /* Hero Section */
+  .hero {
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .text-content {
+    flex: 1;
+  }
+
+  .text-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .text-content p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .image-content {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
+
+  .background-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,transparent);
+    border-radius: 8px;
+    height: 3050px;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .badge {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    height: 85px;
+    border-radius: 8px;
+  }
+
+  .badge-icon {
+    background-color: #38BDF8;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    color: #ffffff;
+  }
+
+  .badge-title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .badge-subtitle {
+    color: #b3b3b3;
+  }
+
+
+
+  /* Estilos para features-section */
+
+
+  .features-section {
+    padding: 60px 20px;
+    background-color: #1E293B;
+  }
+
+  .container {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #38BDF8;
+    margin: 10px auto 0;
+  }
+
+  .features-grid {
+    display: flex;
+    justify-content: center; /* Centra los cards horizontalmente */
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .feature-card {
+    width: 380px; /* Define un ancho fijo para cada card */
+    background-color: #0F172A;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .icon-container {
+    background-color: #1E293B;
+    padding: 20px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+
+  .icon-container:hover {
+    background-color: #38BDF8;
+  }
+
+  .icono {
+    width: 40px;
+    height: 40px;
+    color: #38BDF8;
+    transition: transform 0.4s ease;
+  }
+
+  .icon-container:hover .icon {
+    transform: rotate(20deg) scale(1.1);
+    color: #FFFFFF;
+  }
+
+  .feature-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #E2E8F0;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .feature-description {
+    color: #94A3B8;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 1.5rem;
+    }
+
+    .feature-title {
+      font-size: 1.1rem;
+    }
+
+    .feature-description {
+      font-size: 0.95rem;
+    }
+  }
+
+
+
+
+  /* sports-section */
+
+  h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+
+  /* Tarjetas de Deporte */
+  .grid > div {
+    background-color: #1E293B;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .grid > div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .grid img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .grid img:hover {
+    transform: scale(1.05);
+  }
+
+  .p-6 h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #38BDF8;
+    color: #0F172A;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #0EA5E9;
+    transform: scale(1.02);
+  }
+
+  /* Animación Fade-In para el Título */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
