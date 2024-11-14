@@ -1,4 +1,15 @@
 <header class="bg-primary-color py-4 shadow-md">
+     
+@production
+        @php
+            $manifestPath = public_path('build/manifest.json');
+            $manifest = json_decode(file_get_contents($manifestPath), true);
+        @endphp
+        <link rel="stylesheet" href="{{ asset('build/' . $manifest['resources/css/app.css']['file']) }}">
+        <script type="module" src="{{ asset('build/' . $manifest['resources/js/app.js']['file']) }}" defer></script>
+    @else
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @endproduction
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center gap-2">
                 <img alt="Avatar" class="rounded-full" height="32" width="32" src="img/logo.png" />
