@@ -1,6 +1,6 @@
 [build]
 builder = "nixpacks"
-buildCommand = "composer install && npm install --production && php artisan optimize && php artisan config:cache && php artisan route:cache && php artisan view:cache"
+buildCommand = "composer install && npm install --production && npm run buid && php artisan optimize && php artisan config:cache && php artisan route:cache && php artisan view:cache"
 
 [deploy]
 startCommand = "php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=$PORT"
