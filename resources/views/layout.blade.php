@@ -1,4 +1,3 @@
-<!-- resources/views/layout.blade.php -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,7 +14,7 @@
             <!-- Fallback en caso de que el manifiesto no exista -->
             <link rel="stylesheet" href="{{ asset('css/app.css') }}">
             <script type="module" src="{{ asset('js/app.js') }}" defer></script>
-        @endift
+        @endif
     @else
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endproduction
