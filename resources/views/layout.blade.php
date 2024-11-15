@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
     <title>@yield('title', 'Full Sports | Vive tu pasión por el deporte')</title>
     
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+ 
 </head>
 <body>
     @include('header')
