@@ -7,7 +7,8 @@
     <title>@yield('title', 'Full Sports | Vive tu pasión por el deporte')</title>
     
     @viteReactRefresh
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'], 'build/vite/manifest.json')
+
 
 
 </head>
