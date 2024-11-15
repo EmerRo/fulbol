@@ -11,7 +11,7 @@ export default defineConfig({
     build: {
         // Asegura que los assets se construyan correctamente
         manifest: true,
-        outDir: 'public/build',
+        outDir: 'public/build/vite',
         rollupOptions: {
             output: {
                 manualChunks: undefined
